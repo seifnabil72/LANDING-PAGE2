@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>منصة التجار</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --primary:#2563eb;
+  --primary-soft:#3b82f6;
+  --dark:#020617;
+  --dark-soft:#0f172a;
+  --muted:#94a3b8;
+  --bg:#f8fafc;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Cairo',sans-serif;
+  background:var(--bg);
+  color:var(--dark);
+  line-height:1.7;
+}
+
+/* ===== UTIL ===== */
+.container{max-width:1200px;margin:auto;padding:0 20px}
+.section{padding:100px 0}
+.center{text-align:center}
+h2{font-size:36px;margin-bottom:20px}
+p.section-desc{color:#64748b;max-width:700px;margin:0 auto 60px}
+
+/* ===== HERO ===== */
+.hero{
+  background:
+    radial-gradient(900px 500px at 85% 20%,rgba(59,130,246,.25),transparent),
+    linear-gradient(180deg,#020617,#020617);
+  color:#fff;
+  padding:140px 0;
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:80px;
+  align-items:center;
+}
+.badge{
+  display:inline-block;
+  background:rgba(255,255,255,.08);
+  padding:8px 18px;
+  border-radius:999px;
+  font-size:14px;
+  margin-bottom:28px;
+}
+.hero h1{
+  font-size:52px;
+  line-height:1.25;
+  margin-bottom:24px;
+}
+.hero p{color:#c7d2fe;font-size:18px;max-width:560px}
+.cta-btn{
+  margin-top:40px;
+  padding:18px 46px;
+  border:none;
+  border-radius:16px;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+  color:#fff;
+  background:linear-gradient(135deg,var(--primary-soft),var(--primary));
+  box-shadow:0 25px 60px rgba(37,99,235,.55);
+  transition:.35s;
+}
+.cta-btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 40px 90px rgba(37,99,235,.75);
+}
+
+/* ===== DASHBOARD PREVIEW ===== */
+.dashboard{
+  background:linear-gradient(180deg,#020617,#0f172a);
+  border-radius:28px;
+  padding:26px;
+  box-shadow:0 80px 160px rgba(0,0,0,.8);
+}
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-bottom:22px;
+}
+.stat{
+  background:#020617;
+  border-radius:14px;
+  padding:18px;
+  color:#fff;
+}
+.stat span{font-size:12px;color:#64748b}
+.stat strong{font-size:20px;display:block;margin-top:6px}
+.chart{
+  height:170px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#38bdf8,#2563eb);
+}
+
+/* ===== TRUST ===== */
+.trust{
+  background:#fff;
+  box-shadow:0 30px 60px rgba(0,0,0,.08);
+  border-radius:22px;
+  margin-top:-60px;
+  padding:30px;
+  display:flex;
+  justify-content:space-around;
+  gap:30px;
+}
+.trust div{text-align:center}
+.trust strong{color:var(--primary);font-size:22px}
+.trust span{font-size:14px;color:#64748b}
+
+/* ===== FEATURES ===== */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.feature{
+  background:#fff;
+  padding:36px;
+  border-radius:22px;
+  box-shadow:0 30px 60px rgba(0,0,0,.06);
+  transition:.3s;
+}
+.feature:hover{transform:translateY(-8px)}
+.feature h3{margin-bottom:10px}
+
+/* ===== STEPS ===== */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:30px;
+  text-align:center;
+}
+.step span{
+  font-size:34px;
+  color:var(--primary);
+  font-weight:900;
+}
+
+/* ===== USE CASES ===== */
+.cases{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.case{
+  background:#0f172a;
+  color:#fff;
+  padding:36px;
+  border-radius:22px;
+}
+
+/* ===== FINAL CTA ===== */
+.final-cta{
+  background:linear-gradient(135deg,#2563eb,#020617);
+  color:#fff;
+  border-radius:28px;
+  padding:80px 40px;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:40px;
+  color:#64748b;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  h2{font-size:30px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="badge">منصة تجارة إلكترونية احترافية</span>
+      <h1>تحكّم كامل في تجارتك، مدفوعاتك وإعلاناتك من منصة واحدة</h1>
+      <p>حل ذكي مصمم للتجار الذين يبحثون عن إدارة احترافية وتجربة استخدام سلسة.</p>
+      <button class="cta-btn">ابدأ الآن</button>
+    </div>
+
+    <div class="dashboard">
+      <div class="stats">
+        <div class="stat"><span>المبيعات</span><strong>+24%</strong></div>
+        <div class="stat"><span>الطلبات</span><strong>1,284</strong></div>
+        <div class="stat"><span>الإعلانات</span><strong>56</strong></div>
+      </div>
+      <div class="chart"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<div class="container">
+  <div class="trust">
+    <div><strong>+10K</strong><span>تاجر نشط</span></div>
+    <div><strong>99.9%</strong><span>استقرار النظام</span></div>
+    <div><strong>24/7</strong><span>دعم فني</span></div>
+  </div>
+</div>
+
+<!-- WHY -->
+<section class="section center">
+  <div class="container">
+    <h2>لماذا منصّتنا؟</h2>
+    <p class="section-desc">نساعد التجار على النمو من خلال أدوات ذكية وتجربة استخدام مدروسة.</p>
+    <div class="features">
+      <div class="feature"><h3>إدارة مركزية</h3><p>تحكم كامل في كل تفاصيل تجارتك.</p></div>
+      <div class="feature"><h3>مدفوعات آمنة</h3><p>تكامل سلس مع بوابات الدفع.</p></div>
+      <div class="feature"><h3>إعلانات فعّالة</h3><p>وصول أسرع لعملاء جدد.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="section">
+  <div class="container center">
+    <h2>كيف تعمل المنصة؟</h2>
+    <div class="steps">
+      <div class="step"><span>01</span><p>إنشاء حساب</p></div>
+      <div class="step"><span>02</span><p>إضافة المنتجات</p></div>
+      <div class="step"><span>03</span><p>بدء البيع</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- USE CASES -->
+<section class="section">
+  <div class="container center">
+    <h2>لمن هذه المنصة؟</h2>
+    <div class="cases">
+      <div class="case"><h3>تاجر مبتدئ</h3><p>ابدأ تجارتك بسهولة.</p></div>
+      <div class="case"><h3>متجر متوسّط</h3><p>نظم عملياتك وزد مبيعاتك.</p></div>
+      <div class="case"><h3>شركة كبيرة</h3><p>حلول قابلة للتوسع.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="section">
+  <div class="container center final-cta">
+    <h2>جاهز لتطوير تجارتك؟</h2>
+    <p>ابدأ الآن واستمتع بتجربة احترافية.</p>
+    <button class="cta-btn">ابدأ الآن</button>
+  </div>
+</section>
+
+<footer>© 2025 منصة التجار</footer>
+
+</body>
+</html>
